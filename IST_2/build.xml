@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="ist-assignment-2">
+	<path id="classpath">
+		<pathelement location="bin" />
+	</path>
+
+	<target name="init">
+		<mkdir dir="bin" />
+		<copy includeemptydirs="false" todir="bin">
+			<fileset dir="src">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="clean">
+		<delete dir="bin" />
+	</target>
+
+	<target name="build" depends="init">
+		<javac debug="true" destdir="bin">
+			<src path="src" />
+		</javac>
+	</target>
+
+	<target name="client" depends="build">
+		<java classname="ist.assignment2.Client">
+			<classpath refid="classpath" />
+		</java>
+	</target>
+
+	<target name="server" depends="build">
+		<java classname="ist.assignment2.Server">
+			<classpath refid="classpath" />
+		</java>
+	</target>
+
+</project>
+

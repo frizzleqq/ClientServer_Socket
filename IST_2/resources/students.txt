@@ -1,0 +1,8 @@
+Name Surname StudentID
+Tyrion Lannister 023456
+Cersei Lannister 021654
+Catelyn Stark 025631
+Daenerys Targaryen 089654
+Arya Stark 088999
+Sansa Stark 012326
+Joffrey Baratheon 056321
